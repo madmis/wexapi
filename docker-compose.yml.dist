@@ -1,0 +1,17 @@
+version: '3'
+services:
+    wexapi:
+        build: ./
+        image: wex-api:latest
+        environment:
+            - PYTHONPATH=/var/www
+            - DISPLAY=:0
+        expose:
+            - "3000"
+        volumes:
+            - ./:/var/www
+            - /tmp/.X11-unix:/tmp/.X11-unix:ro
+        tty: true
+        stdin_open: true
+        user: ${USER}
+        hostname: wexapi
