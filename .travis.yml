@@ -2,9 +2,10 @@ language: python
 python:
   - "3.6"
   - "3.6-dev"
-  - "3.7-dev"
-  - "nightly"
-  - "pypy"
   - "pypy3"
+install:
+  - pip install -r requirements-test.txt
 script:
-    python -m unittest discover -s wexapi/test/
+    coverage  run --source wexapi setup.py test
+after_success:
+    coveralls
