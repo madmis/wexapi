@@ -19,6 +19,7 @@ MIT License
 ## Wex.nz REST API Reference
 
 [Public API](https://wex.nz/api/3/docs)
+
 [Trade API](https://wex.nz/tapi/docs)
 
 
