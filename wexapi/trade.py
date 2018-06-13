@@ -152,7 +152,7 @@ class TradeApi(object):
             params["pair"] = pair
 
         orders = list(self._post(params).items())
-        orders.sort(reverse=order != "ASC")
+        # orders.sort(reverse=order != "ASC")
         result = []
         for k, v in orders:
             result.append(TradeHistory(int(k), **v))
