@@ -32,6 +32,13 @@ or [create pull request](https://github.com/madmis/wexapi/compare)
     python -m unittest discover wexapi
 
 
+## Upgrade pip package
+    
+    setup.py sdist
+    twine upload dist/*
+
+
+
 [testing-link]: https://travis-ci.org/madmis/wexapi
 [testing-image]: https://travis-ci.org/madmis/wexapi.svg?branch=master
 

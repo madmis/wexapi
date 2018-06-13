@@ -10,4 +10,4 @@ import wexapi.public as public
 import wexapi.trade as trade
 
 name = "wexapi"
-__version__ = "0.1.0"
+__version__ = "0.1.1"
