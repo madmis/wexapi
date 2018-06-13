@@ -1,11 +1,12 @@
 import setuptools
 
-with open("Readme.md", "r") as fh:
+with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="wexapi",
-    version="0.1.1",
+    version="0.1.2",
+    license='MIT',
     author="Machin Dmitro",
     author_email="machin.dmitry+pypi.org@gmail.com",
     description="Wex.nz API Client",

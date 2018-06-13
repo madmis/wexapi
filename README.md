@@ -34,7 +34,7 @@ or [create pull request](https://github.com/madmis/wexapi/compare)
 
 ## Upgrade pip package
     
-    setup.py sdist
+    python setup.py sdist
     twine upload dist/*
 
 
