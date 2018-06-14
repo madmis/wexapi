@@ -200,7 +200,7 @@ class TradeApi(object):
         params = {"method": "OrderInfo", "order_id": order_id}
         orders = self._post(params)
 
-        order = orders[order_id]
+        order = orders[str(order_id)]
         order['order_id'] = order_id
 
         return OrderInfo(**order)
