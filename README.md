@@ -29,15 +29,58 @@ To create new endpoint - [create issue](https://github.com/madmis/wexapi/issues/
 or [create pull request](https://github.com/madmis/wexapi/compare)
 
 
+## How to use
+
+Get ticker for each available pair (public api):
+
+```python
+conn = wexapi.common.WexConnection()
+info = wexapi.public.InfoApi(conn)
+api = wexapi.public.PublicApi(conn)
+for pair in info.pair_names:
+    ticker = api.get_ticker(pair, info)
+```
+
+Get account info (trade api - require api keys)
+
+```python
+key_file = "/var/www/keys.txt"
+with wexapi.keyhandler.KeyHandler(key_file) as handler:
+    if not handler.keys:
+        print("No keys in key file.")
+    else:
+        for key in handler.keys:
+            print("Printing info for key {}".format(key))
+
+            with wexapi.WexConnection() as conn:
+                t = wexapi.trade.TradeApi(key, handler, connection=conn)
+
+                r = t.get_info()
+```
+
+
 ## Running the tests
 
     python -m unittest discover wexapi
 
 
-## Upgrade pip package
-    
-    python setup.py sdist
-    twine upload dist/*
+## Setup dev environment with docker
+
+Install [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
+
+```
+    cp /{proj_path}/Dockerfile.dist /{proj_path}/Dockerfile 
+    cp /{proj_path}/docker-compose.yml.dist /{proj_path}/docker-compose.yml 
+```
+
+In **Dockerfile** change **{host_user}** to your local user.
+
+Build and run docker container
+
+```
+    docker-compose build 
+    docker-compose up -d 
+```
 
 
 ## Login to docker container
@@ -57,6 +100,13 @@ XRP: rpoi4dWSbEyQP2xmpsNMxCk2g2n5QvVSmM
 Waves: 3PPXpTagbQCSXYZ3Y5h6vuFPj6RxHbnapmE
 BTS: madmis-1
 ```
+
+
+## Upgrade pip package (personal notes)
+    
+    python setup.py sdist
+    twine upload dist/*
+
 
 
 
