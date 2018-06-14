@@ -11,6 +11,7 @@
 
 This API client will help you interact with Wex.nz by REST API. 
 
+
 ## License
 
 MIT License
@@ -27,6 +28,7 @@ MIT License
 To create new endpoint - [create issue](https://github.com/madmis/wexapi/issues/new) 
 or [create pull request](https://github.com/madmis/wexapi/compare)
 
+
 ## Running the tests
 
     python -m unittest discover wexapi
@@ -38,10 +40,25 @@ or [create pull request](https://github.com/madmis/wexapi/compare)
     twine upload dist/*
 
 
-# Login to docker container
+## Login to docker container
 ```bash
     docker exec  -ti -e COLUMNS="`tput cols`" -e LINES="`tput lines`" wexapi_wexapi_1 bash
 ```
+
+
+## Donate
+If you find the library useful and would like to donate, please send some coins here:
+
+```
+BTC: 19nhMniZJ4p771ZvFHL3s8zoBML46LqFRv
+BCH: qpsx260laq6wj4s99052nuy063v7j0sxsqxluur84z
+ETH: 0x387D91F008dB992c7DAd9be8493dfA68E565706E
+XRP: rpoi4dWSbEyQP2xmpsNMxCk2g2n5QvVSmM
+Waves: 3PPXpTagbQCSXYZ3Y5h6vuFPj6RxHbnapmE
+BTS: madmis-1
+```
+
+
 
 
 [testing-link]: https://travis-ci.org/madmis/wexapi
