@@ -38,6 +38,11 @@ or [create pull request](https://github.com/madmis/wexapi/compare)
     twine upload dist/*
 
 
+# Login to docker container
+```bash
+    docker exec  -ti -e COLUMNS="`tput cols`" -e LINES="`tput lines`" wexapi_wexapi_1 bash
+```
+
 
 [testing-link]: https://travis-ci.org/madmis/wexapi
 [testing-image]: https://travis-ci.org/madmis/wexapi.svg?branch=master

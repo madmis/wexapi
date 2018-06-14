@@ -5,9 +5,9 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="wexapi",
-    version="0.1.3",
+    version="0.1.4",
     license='MIT',
-    author="Machin Dmitro",
+    author="Machin Dmytro",
     author_email="machin.dmitry+pypi.org@gmail.com",
     description="Wex.nz API Client",
     long_description=long_description,
