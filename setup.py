@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="wexapi",
-    version="0.1.5",
+    version="0.1.6",
     license='MIT',
     author="Machin Dmytro",
     author_email="machin.dmitry+pypi.org@gmail.com",
