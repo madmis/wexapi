@@ -53,11 +53,6 @@ class TestAbstractKeyHandler(unittest.TestCase):
         # incidentally tests addKey, too
         self.assertEqual(set(self._handler_with_keys().keys), {'k2', 'k1'})
 
-    def test___del__(self):
-        handler = DummyKeyHandler()
-        handler.__del__()
-        assert handler.datastore_updated
-
     def test___exit__(self):
         handler = DummyKeyHandler()
         handler.__exit__('type', 'value', 'traceback')

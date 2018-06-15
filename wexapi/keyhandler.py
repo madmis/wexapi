@@ -65,9 +65,6 @@ class AbstractKeyHandler(object):
         """
         raise NotImplementedError
 
-    def __del__(self):
-        self.close()
-
     def close(self):
         self._update_data_store()
 
