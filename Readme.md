@@ -121,4 +121,4 @@ BTS: madmis-1
 [package-image]: https://img.shields.io/pypi/v/wexapi.svg?style=flat-square
 
 [license-image]: https://img.shields.io/github/license/madmis/wexapi.svg
-[license-link]: https://github.com/madmis/wexapi/blob/master/LICENSE.TXT
+[license-link]: https://github.com/madmis/wexapi/blob/master/License.txt

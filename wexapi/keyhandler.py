@@ -15,11 +15,11 @@ class KeyData(object):
 
     def set_nonce(self, new_nonce: int) -> int:
         if new_nonce <= 0:
-            raise InvalidNonceException('Nonce must be positive')
+            raise InvalidNonceException("Nonce must be positive")
         if new_nonce <= self.nonce:
-            raise InvalidNonceException('Nonce must be strictly increasing')
+            raise InvalidNonceException("Nonce must be strictly increasing")
         if new_nonce > self.MAX_NONCE_VALUE:
-            raise InvalidNonceException('Nonce cannot be greater than {}'.format(self.MAX_NONCE_VALUE))
+            raise InvalidNonceException("Nonce cannot be greater than {}".format(self.MAX_NONCE_VALUE))
 
         self.nonce = new_nonce
 
@@ -27,7 +27,7 @@ class KeyData(object):
 
     def increment_nonce(self) -> int:
         if self.nonce >= self.MAX_NONCE_VALUE:
-            raise InvalidNonceException('Cannot increment nonce, already at maximum value')
+            raise InvalidNonceException("Cannot increment nonce, already at maximum value")
 
         self.nonce += 1
 
